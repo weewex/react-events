@@ -59,7 +59,7 @@ An object with a single property:
 
 ```tsx
 import React from 'react';
-import { useEmitEvent } from './useEmitEvent';
+import { useEmitEvent } from '@weewex/react-events';
 
 function MyComponent() {
   // Create an emit function for the "dataUpdate" event
@@ -104,7 +104,7 @@ This hook does not return any value. Its sole purpose is to register and unregis
 
 ```tsx
 import React, { useState } from 'react';
-import { useListenEvent } from './useListenEvent';
+import { useListenEvent } from '@weewex/react-events';
 
 function MyComponent() {
   const [message, setMessage] = useState('');
