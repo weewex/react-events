@@ -1,6 +1,6 @@
 {
   "name": "@weewex/react-events",
-  "version": "0.0.1-development",
+  "version": "0.0.2-development",
   "description": "A react events management helpers",
   "main": "./lib/index.js",
   "files": [
