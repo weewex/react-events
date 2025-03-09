@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
-import { debugMode, eventEmitter } from '../events/emitter';
+import { eventEmitter } from '../events/emitter';
+import { isDebugMode } from '../events/debug';
 
 type EmitReturn = boolean;
 type EmitFunction = (...args: any[]) => EmitReturn;
@@ -8,7 +9,7 @@ function emitFunctionFactory(eventName: string): EmitFunction {
   return (...args: any[]): EmitReturn => {
     /* istanbul ignore next */
     if (
-      debugMode &&
+      isDebugMode() &&
       console &&
       typeof console.groupCollapsed === 'function' &&
       eventEmitter.listeners(eventName).length

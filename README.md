@@ -21,18 +21,14 @@ npm install @weewex/react-events
 
 > The debug message will appear in devtools console when an event has been emitted
 
-Will work only if `NODE_ENV` is set to development in .env
+Use `configure` function to set debug option
 
-```dotenv
-NODE_ENV=development
+```ts
+import { configure } from '@weewex/react-events';
+
+configure({debug: process.env.NODE_ENV === "development"})
 ```
 
-Set any of these to true
-
-```dotenv
-REACT_EVENTS_DEBUG=true
-NEXT_PUBLIC_REACT_EVENTS_DEBUG=true
-```
 
 ## useEmitEvent
 
